@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:doll_store/files/provider/cartprovider.dart';
+import 'package:doll_store/provider/cartprovider.dart';
 import 'package:provider/provider.dart';
 
 class PrdctDesc extends StatefulWidget {
@@ -24,6 +24,7 @@ class _PrdctDescState extends State<PrdctDesc> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
+            //menampilkan item name sesuai dengan index
             "${widget.item['Item Name']}",
             style: const TextStyle(
               fontSize: 30,
@@ -48,6 +49,7 @@ class _PrdctDescState extends State<PrdctDesc> {
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
                 const SizedBox(height: 20),
+                //menampilkan deskripsi item
                 Text(
                   'Item desc: ${widget.item['Item desc']}',
                   style: const TextStyle(

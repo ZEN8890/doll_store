@@ -1,6 +1,6 @@
 // ignore_for_file: unused_local_variable, must_be_immutable, use_key_in_widget_constructors
 
-import 'package:doll_store/files/pages/Product_desc.dart';
+import 'package:doll_store/pages/Product_desc.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:faker/faker.dart';
@@ -15,6 +15,7 @@ class Grid extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
+        //gridview adalah sebuah susunan kotak yang dapat discroll
         padding:
             const EdgeInsets.only(bottom: kBottomNavigationBarHeight + 16.0),
         child: GridView.builder(
@@ -46,6 +47,7 @@ class Grid extends StatelessWidget {
   }
 }
 
+//item list untuk mengisi index item yang ditampilkan di store
 class ItemList {
   final List<Map<String, dynamic>> items = [
     {

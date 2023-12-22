@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 
-import 'package:doll_store/files/provider/cartprovider.dart';
+import 'package:doll_store/provider/cartprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,9 +14,10 @@ class CartPage extends StatelessWidget {
       totalPrice += (item['price'] ?? 0) * (item['quantity'] ?? 0);
     }
     return Scaffold(
+      //coding appbar untuk memberikan title "Shopping Cart" pada bagian atas screen
       appBar: AppBar(
         title: const Text(
-          "Doll Store",
+          "Shopping Cart",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
@@ -28,6 +29,7 @@ class CartPage extends StatelessWidget {
         titleTextStyle: const TextStyle(fontStyle: FontStyle.italic),
       ),
       body: ListView.builder(
+        //untuk menampilkan list item yang sudah di add ke cart
         itemCount: cartProvider.cart.length,
         itemBuilder: (context, index) {
           final item = cartProvider.cart[index];
@@ -49,6 +51,7 @@ class CartPage extends StatelessWidget {
               ),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
+                //memberikan button + dan - untuk menambah quantity item  atau mengurangi item
                 children: [
                   IconButton(
                     icon: const Icon(Icons.remove),
@@ -69,6 +72,7 @@ class CartPage extends StatelessWidget {
         },
       ),
       bottomNavigationBar: BottomAppBar(
+        //memberikan tempat untuk checkout button pada cart page
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(

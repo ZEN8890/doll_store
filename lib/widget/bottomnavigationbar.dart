@@ -1,10 +1,11 @@
 // ignore_for_file: camel_case_types, use_key_in_widget_constructors
 
-import 'package:doll_store/files/pages/Cartpage.dart';
-import 'package:doll_store/files/pages/ProfilePage.dart';
-import 'package:doll_store/files/pages/StorePage.dart';
+import 'package:doll_store/pages/Cartpage.dart';
+import 'package:doll_store/pages/ProfilePage.dart';
+import 'package:doll_store/pages/StorePage.dart';
 import 'package:flutter/material.dart';
 
+//menampilkan bottom bar di bawah layar agar user dapat berpindah layar dari home,cart,dan profile
 class Store_botnav extends StatelessWidget {
   const Store_botnav({Key? key});
 

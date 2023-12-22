@@ -37,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
               children: [
                 const CircleAvatar(
                   radius: 60,
-                  // Add your user's profile picture here
+                  // tempat meletakan profile pict
                   backgroundImage: AssetImage('assets/profile_image.jpg'),
                 ),
                 const SizedBox(height: 16),

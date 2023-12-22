@@ -8,6 +8,7 @@ class Carousel extends StatefulWidget {
   State<Carousel> createState() => _CarouselState();
 }
 
+//menampilkan carousel yang ada pada Storepage
 class _CarouselState extends State<Carousel> {
   // image url address
   final List<String> Imageurl = [
@@ -42,6 +43,7 @@ class _CarouselState extends State<Carousel> {
                         color: const Color.fromARGB(255, 33, 133, 161),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
+                      //memberikan bentuk round edge pada kotak carousel
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(Url, fit: BoxFit.cover),

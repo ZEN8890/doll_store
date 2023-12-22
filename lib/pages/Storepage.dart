@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:doll_store/files/widget/gridview.dart';
-import 'package:doll_store/files/widget/carousel.dart';
+import 'package:doll_store/widget/gridview.dart';
+import 'package:doll_store/widget/carousel.dart';
 
 class StorePage extends StatefulWidget {
   const StorePage({super.key});
@@ -25,6 +25,7 @@ class _StorePageState extends State<StorePage> {
         titleTextStyle: const TextStyle(fontStyle: FontStyle.italic),
       ),
       body: SingleChildScrollView(
+        //memberikan kemampuan pada user untuk scroll layar
         scrollDirection: Axis.vertical,
         child: Center(
           child: Column(

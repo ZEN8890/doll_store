@@ -1,5 +1,5 @@
 // ignore_for_file: library_private_types_in_public_api, file_names
-import 'package:doll_store/files/widget/bottomnavigationbar.dart';
+import 'package:doll_store/widget/bottomnavigationbar.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -20,6 +20,7 @@ class _LoginPage extends State<LoginPage> {
 
 //login handle
   void _handleLogin() {
+    //validator username dan password
     final String username = _usernameController.text;
     final String password = _passwordController.text;
 
@@ -67,6 +68,7 @@ class _LoginPage extends State<LoginPage> {
                           decoration: const InputDecoration(
                               prefixIcon: Icon(Icons.person),
                               border: OutlineInputBorder(),
+                              //form untuk Username dan memberikan petunjuk bahwa kolom tersebut adalah untuk username
                               hintText: "Enter Username",
                               labelText: "Username"),
                           onChanged: (String? value) {}, //onchanged
@@ -87,6 +89,7 @@ class _LoginPage extends State<LoginPage> {
                           decoration: const InputDecoration(
                               prefixIcon: Icon(Icons.lock),
                               border: OutlineInputBorder(),
+                              //form untuk password dan memberikan petunjuk bahwa kolom tersebut adalah untuk password
                               hintText: "Enter password",
                               labelText: "Password"),
                           obscureText: true,
